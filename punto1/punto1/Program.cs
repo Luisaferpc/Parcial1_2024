@@ -21,11 +21,11 @@ public class Program
         double Vcomision = ventatotal * Pcomision; //para calcular el valor total de la comision
 
 
-        if (ventatotal > 1000000) // cuanto recibe si cumple con la meta
+        if (ventatotal >= 1000000) // cuanto recibe si cumple con la meta
         {
             Console.WriteLine("Felicitaciones! Ha cumplido la meta del mes para ganar el beneficio.");
             Console.WriteLine("Total de comisiones del mes: "  +Vcomision);
-            Console.WriteLine("Total a pagar: " + sueldo + Vcomision + beneficio);
+            Console.WriteLine("Total a pagar: " + (sueldo + Vcomision + beneficio));
             Console.WriteLine("Comisiones promedio por cada venta:" +Vcomision/3);
             
             if (venta1 >venta2 && venta1 > venta3)
@@ -44,7 +44,7 @@ public class Program
         {
             Console.WriteLine("LO SIENTO! No cumplido la meta del mes para ganar el beneficio :( ");
             Console.WriteLine("Total de comisiones del mes: " + Vcomision);
-            Console.WriteLine("Total a pagar: " + sueldo + Vcomision);
+            Console.WriteLine("Total a pagar: " + (sueldo + Vcomision));
             Console.WriteLine("Comisiones promedio por cada venta:" + Vcomision / 3);
 
             if (venta1 > venta2 && venta1 > venta3)
