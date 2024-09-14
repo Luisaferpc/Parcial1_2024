@@ -21,15 +21,44 @@ public class Program
         double Vcomision = ventatotal * Pcomision; //para calcular el valor total de la comision
 
 
-        if (ventatotal > 1000000) 
+        if (ventatotal > 1000000) // cuanto recibe si cumple con la meta
         {
             Console.WriteLine("Felicitaciones! Ha cumplido la meta del mes para ganar el beneficio.");
             Console.WriteLine("Total de comisiones del mes: "  +Vcomision);
+            Console.WriteLine("Total a pagar: " + sueldo + Vcomision + beneficio);
+            Console.WriteLine("Comisiones promedio por cada venta:" +Vcomision/3);
             
+            if (venta1 >venta2 && venta1 > venta3)
+            {
+                Console.WriteLine("La venta mas alta que le genero la mayor comision fue: "+venta1);
+            }else if (venta2 >venta1 && venta2 > venta3)
+                { Console.WriteLine("La venta mas alta que le genero la mayor comision fue: " + venta2); 
+            }else if(venta3 >venta1 && venta3 > venta2)
+            {
+                Console.WriteLine("La venta mas alta que le genero la mayor comision fue: " + venta3);
+            }
 
 
-            Console.WriteLine("total a pagar(sueldo+comisiones+bonificacion ")
 
+        }else // SI NO ALCANZA LA META
+        {
+            Console.WriteLine("LO SIENTO! No cumplido la meta del mes para ganar el beneficio :( ");
+            Console.WriteLine("Total de comisiones del mes: " + Vcomision);
+            Console.WriteLine("Total a pagar: " + sueldo + Vcomision);
+            Console.WriteLine("Comisiones promedio por cada venta:" + Vcomision / 3);
+
+            if (venta1 > venta2 && venta1 > venta3)
+            {
+                Console.WriteLine("La venta mas alta que le genero la mayor comision fue: " + venta1);
+            }
+            else if (venta2 > venta1 && venta2 > venta3)
+            {
+                Console.WriteLine("La venta mas alta que le genero la mayor comision fue: " + venta2);
+            }
+            else if (venta3 > venta1 && venta3 > venta2)
+            {
+                Console.WriteLine("La venta mas alta que le genero la mayor comision fue: " + venta3);
+            }
 
         }
 
